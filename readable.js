@@ -1,3 +1,4 @@
+if (typeof Buffer === 'undefined') global.Buffer = require('buffer').Buffer
 var Stream = require('stream');
 if (process.env.READABLE_STREAM === 'disable' && Stream) {
   module.exports = Stream.Readable;
